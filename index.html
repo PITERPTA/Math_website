@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css"> 
+    <link rel="stylesheet" href="style.css"> 
+    <script defer src="script.js"></script>
 </head>
 </head>
 <body>
 <div class="container">
+<!-- sidebar, if you're blind -->
     <nav class="sidebar">
-        <a href="?page=home" onclick="loadPage('home'); return false;"> Strona główna </a>
-        <a href="?page=zadania" onclick="loadPage('zadania'); return false;"> Zadania </a>
-        <a href="?page=autorzy" onclick="loadPage('autorzy'); return false;"> Autorzy </a>
+        <a href="?page=home" onclick="loadPage('home')"> Strona główna </a>
+        <a href="?page=zadania" onclick="loadPage('zadania')"> Zadania </a>
+        <a href="?page=autorzy" onclick="loadPage('autorzy')"> Autorzy </a>
     </nav>
-    <div id="content">Loading...</div>
+<!-- this is the div into whitch html conntent is loaded -->
+    <div id="content">Loading...
+        
+    </div>
 
-    <script src="script.js"></script>
 </div>
 </body>
 </html>

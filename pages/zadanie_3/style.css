@@ -1,0 +1,10 @@
+#content {
+ background-color: #f4f4f4;
+}
+#content .main {
+    text-align: center;
+}
+#content p {
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
