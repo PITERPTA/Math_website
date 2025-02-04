@@ -11,9 +11,32 @@ function loadPage(page) {
         .then(data => {
             contentDiv.innerHTML = data; // Insert the content into the page
             history.pushState(null, "", "?page=" + page); // Update the URL
-            executeScripts();
-            //renderKaTeX();
-            
+            executeScripts();            
+            // Load the corresponding CSS for this page
+            loadPageCSS(page);
+        })
+        .catch(() => {
+            contentDiv.innerHTML = "<h1>404 - Page Not Found</h1>";
+        });
+}
+function updateUrlParam(key, value) {
+    const url = new URL(window.location.href);  // Get current URL
+    url.searchParams.set(key, value);  // Set the parameter or add if not present
+    window.history.pushState({}, '', url);  // Update the URL in the browser
+}
+
+function loadContent(page) {
+    const contentDiv = document.getElementById("content_zadanie");
+    contentDiv.innerHTML = "<p>Loading...</p>";
+
+    // Fetch the content of the requested page
+    fetch(`/pages/${page}/${page}.html`)
+    
+        .then(response => response.ok ? response.text() : "<h1>404 - Page Not Found</h1>")
+        .then(data => {
+            contentDiv.innerHTML = data; // Insert the content into the page
+            updateUrlParam('zadanie', 'zadanie_3') // Update the URL
+            executeScripts();            
             // Load the corresponding CSS for this page
             loadPageCSS(page);
         })
@@ -22,21 +45,12 @@ function loadPage(page) {
         });
 }
 
-
 function executeScripts() {
     let scripts = document.getElementById("content").getElementsByTagName("script");
     for (let script of scripts) {
         let newScript = document.createElement("script");
         newScript.textContent = script.textContent; // Copy inline script
         document.body.appendChild(newScript).parentNode.removeChild(newScript); // Run script
-    }
-}
-
-function renderKaTeX() {
-    if (window.katex) {
-        document.querySelectorAll('.math').forEach(el => {
-            katex.render(el.textContent, el, { throwOnError: false });
-        });
     }
 }
 // Function to load the CSS for the page and remove the old one

@@ -7,37 +7,20 @@
     <title>Zadanie 3</title>
 </head>
 <body>
-    <div class="main" id="math">
-        <h2>Math Page</h2>
-        <p>Tomek przejechał na rowerze 32 km szosą i 20 km polną drogą w czasie 2 godzin i 40 minut. Średnia prędkość jazdy po szosie była o 20 km/h większa od średniej prędkości jazdy po polnej drodze. Oblicz średnią prędkość na szosie i średnią prędkość na polnej drodze.
-        </p>
-        <img src="/pages/zadanie_3/obraz.jpeg" alt="Obraz pomocniczy">
-        <p>Oznaczmy: </p>
-        <p> \( x - \) średnia prędkość Tomka na polnej drodze (w \( \frac{km}{h} \)), <br>
-            \( x + 20 - \) średnia prędkość Tomka na szosie (w \( \frac{km}{h} \))<br></p>
-        <p>Ułóżmy równanie:</p>
-        \[\frac{32}{x + 20} + \frac{20}{x} = \frac{8}{3} \]
-        <p>Przekształćmy równanie:</p>
-        \[\frac{32x + 20(x + 20)}{x(x + 20)} = \frac{8}{3} \]
-        \[3(32x + 20x + 400) = 8x(x + 20) \]
-        \[156x + 1200 = 8x^2 + 160x \]
-        \[8x^2 + 4x - 1200 = 0 \]
-        <p>Rozwiążmy równanie kwadratowe:</p>
-        \[x_{1} = \frac{-4 + \sqrt{4^2 - 4 \cdot 8 \cdot -1200}}{2 \cdot 8} \quad x_{2} = \frac{-4 - \sqrt{4^2 - 4 \cdot 8 \cdot -1200}}{2 \cdot 8} \]
-        \[x_{1} = 12 \quad x_{2} = -12.5 \text { (x nie może być ujemne)} \]
-
-        <p><b>Odp. </b> Średnia prędkość Tomka na polnej drodze wynosi \( 12 \frac{km}{h} \), a na szosie \( 32 \frac{km}{h} \).</p>
-
-        <script>
-            // Wait for the content to be loaded and then render the math
-            document.addEventListener("DOMContentLoaded", function() {
-                var mathElement = document.querySelectorAll('#content p');
-                if (mathElement) {
-                    katex.render(mathElement.innerHTML, mathElement);
-                }
-            });
-        </script>
-
+    <div class="main">
+        <p>123 nigger</p> <p id="math">  \ x+1 \ </p>
     </div>
+    <script>
+        // Wait for the content to be loaded and then render the math
+        setTimeout(function() {
+            mathElement = document.getElementById("math")
+            if (mathElement) {
+                // Render LaTeX math with KaTeX
+                katex.render(mathElement.innerHTML, mathElement);
+            } else {
+                console.error("Math element not found.");
+            }
+        }, 1000)
+    </script>
 </body>
 </html>

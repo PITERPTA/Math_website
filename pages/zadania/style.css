@@ -24,3 +24,6 @@
     flex-direction: column;
     align-items: center;
 }
+#content_zadanie {
+    background-color: #f4f4ff;
+}
