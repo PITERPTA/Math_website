@@ -74,3 +74,4 @@ window.onload = () => {
     const urlParams = new URLSearchParams(window.location.search);
     loadPage(urlParams.get("page") || "home"); // Default to home if no page is specified
 };
+

@@ -4,46 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h3>Zadanie 4.</h3>
+    <div id="math">
+        <h3>Zadanie 4.</h3>
 
-    <ol start="4.">
-        <li>Trasa rowerowa wokół jeziora ma długość \(12 km\). Dwóch rowerzystów wyruszyło jednocześnie z tego samego miejsca i okrążało jezioro w tym samym kierunku. Średnia prędkość jednego z nich była o \(5 \frac{km}{h}\) mniejsza niż średnia prędkość drugiego. Do ponownego spotkania rowerzystów doszło, gdy szybszy z nich wykonał \(4\) okrążenia jeziora, a wolniejszy \(3\). <br> Oblicz średnie prędkości obu rowerzystów.</li>
-    </ol>
+        <ol start="4.">
+            <li>Trasa rowerowa wokół jeziora ma długość \12 km\. Dwóch rowerzystów wyruszyło jednocześnie z tego samego miejsca i okrążało jezioro w tym samym kierunku. Średnia prędkość jednego z nich była o \(5 \frac{km}{h}\) mniejsza niż średnia prędkość drugiego. Do ponownego spotkania rowerzystów doszło, gdy szybszy z nich wykonał \(4\) okrążenia jeziora, a wolniejszy \(3\). <br> Oblicz średnie prędkości obu rowerzystów.</li>
+        </ol>
 
-    <p, style="font-weight: 600;">Informacje z treści polecenia:</p>
-    
-    <img style="position: absolute; right: 2%; top: 210px; z-index: -2;" src="cyclists.gif" alt="cyclist.gif">
+        <p, style="font-weight: 600;">Informacje z treści polecenia:</p>
 
-    <p, style="font-weight: 500;">
-        <li>średnia prędkość 1. rowerzysty &RightArrow; \(V_s\)</li>
-        <li>średnia prędkość 2. rowerzysty &RightArrow; \(V_s - 5 \frac{km}{h}\)</li>
-        <li>obwód jeziora &RightArrow; \(l\)</li>
-    </p>
-    
-    <br>
-    
-    <p class="adnote">Ze wzoru na drogę w ruchu jednostajnym otrzymujemy:</p>
-    <div class="latex"> \[ S=V \times T \quad /:V\] </div>
-    <div class="latex"> \[ \frac{S}{V} = T\] </div>
-    <p class="adnote">Podstawiamy za \(S\) drogę przebytą przez rowerzystę, a za \(V\) jego prędkość, <br> następnie przyrównujemy oba czasy \(T\), ponieważ obaj rowerzyści jechali przez taką samą ilość czasu.</p>
-    <div class="latex"> \[ \frac{4l}{V_s} = \frac{3l}{V_s - 5}\] </div>
-    <p class="adnote">Wykluczamy z możliwych wyników wartości, które prowadziły by do mianownika \(= 0\), <br> czyli \(V_s \neq 0 \wedge V_s - 5 \neq 0 \implies V_s \neq 0 \wedge V_s \neq 5\) i kontynuujemy przekształcenia</p>
-    <div class="latex"> \[ \frac{4l}{V_s} = \frac{3l}{V_s - 5} \quad /:l\] </div>
-    <div class="latex"> \[ \frac{4}{V_s} = \frac{3}{V_s - 5} \quad /\times (V_s - 5)\] </div>
-    <div class="latex"> \[ \frac{4(V_s - 5)}{V_s} \times = 3 \quad /\times V_s\] </div>
-    <div class="latex"> \[ 4V_s - 20 = 3V_s\] </div>
-    <div class="latex"> \[ 4V_s - 20 = 3V_s \quad /-3V_s\] </div>
-    <div class="latex"> \[ V_s - 20 = 0 \quad /+20\] </div>
-    <div class="latex"> \[ V_s = 20 \] </div>
-    <p class="adnote">Otrzymujemy wynik \(V_s = 20\), <br> co oznacza, że prędkości rowerzystów 1. i 2. wynoszą odpowiednio:</p>
-    <div class="latex"> \[ V_s = 20\frac{km}{h} \] </div>
-    <div class="latex"> \[ V_s - 5 = 15\frac{km}{h} \] </div>
+        <img style="position: absolute; right: 2%; top: 210px; z-index: -2;" src="/pages/zadanie_4/cyclists.gif" alt="cyclist.gif">
+
+        <p, style="font-weight: 500;">
+            <li>średnia prędkość 1. rowerzysty &RightArrow; \(V_s\)</li>
+            <li>średnia prędkość 2. rowerzysty &RightArrow; \(V_s - 5 \frac{km}{h}\)</li>
+            <li>obwód jeziora &RightArrow; \(l\)</li>
+        </p>
+
+        <br>
+
+        <p class="adnote">Ze wzoru na drogę w ruchu jednostajnym otrzymujemy:</p>
+        <div class="latex"> \[ S=V \times T \quad /:V\] </div>
+        <div class="latex"> \[ \frac{S}{V} = T\] </div>
+        <p class="adnote">Podstawiamy za \(S\) drogę przebytą przez rowerzystę, a za \(V\) jego prędkość, <br> następnie przyrównujemy oba czasy \(T\), ponieważ obaj rowerzyści jechali przez taką samą ilość czasu.</p>
+        <div class="latex"> \[ \frac{4l}{V_s} = \frac{3l}{V_s - 5}\] </div>
+        <p class="adnote">Wykluczamy z możliwych wyników wartości, które prowadziły by do mianownika \(= 0\), <br> czyli \(V_s \neq 0 \wedge V_s - 5 \neq 0 \implies V_s \neq 0 \wedge V_s \neq 5\) i kontynuujemy przekształcenia</p>
+        <div class="latex"> \[ \frac{4l}{V_s} = \frac{3l}{V_s - 5} \quad /:l\] </div>
+        <div class="latex"> \[ \frac{4}{V_s} = \frac{3}{V_s - 5} \quad /\times (V_s - 5)\] </div>
+        <div class="latex"> \[ \frac{4(V_s - 5)}{V_s} \times = 3 \quad /\times V_s\] </div>
+        <div class="latex"> \[ 4V_s - 20 = 3V_s\] </div>
+        <div class="latex"> \[ 4V_s - 20 = 3V_s \quad /-3V_s\] </div>
+        <div class="latex"> \[ V_s - 20 = 0 \quad /+20\] </div>
+        <div class="latex"> \[ V_s = 20 \] </div>
+        <p class="adnote">Otrzymujemy wynik \(V_s = 20\), <br> co oznacza, że prędkości rowerzystów 1. i 2. wynoszą odpowiednio:</p>
+        <div class="latex"> \[ V_s = 20\frac{km}{h} \] </div>
+        <div class="latex"> \[ V_s - 5 = 15\frac{km}{h} \] </div>
+    </div>
+    <script>
+    setTimeout(function() {
+        mathElement = document.getElementById("math")
+        if (mathElement) {
+            // Render LaTeX math with KaTeX
+            katex.render(mathElement.innerHTML, mathElement);
+        } else {
+            console.error("Math element not found.");
+        }
+    }, 1000)
+</script>
 </body>
 
 </html>
