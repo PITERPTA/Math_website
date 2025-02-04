@@ -11,7 +11,9 @@ function loadPage(page) {
         .then(data => {
             contentDiv.innerHTML = data; // Insert the content into the page
             history.pushState(null, "", "?page=" + page); // Update the URL
-
+            executeScripts();
+            //renderKaTeX();
+            
             // Load the corresponding CSS for this page
             loadPageCSS(page);
         })
@@ -20,6 +22,23 @@ function loadPage(page) {
         });
 }
 
+
+function executeScripts() {
+    let scripts = document.getElementById("content").getElementsByTagName("script");
+    for (let script of scripts) {
+        let newScript = document.createElement("script");
+        newScript.textContent = script.textContent; // Copy inline script
+        document.body.appendChild(newScript).parentNode.removeChild(newScript); // Run script
+    }
+}
+
+function renderKaTeX() {
+    if (window.katex) {
+        document.querySelectorAll('.math').forEach(el => {
+            katex.render(el.textContent, el, { throwOnError: false });
+        });
+    }
+}
 // Function to load the CSS for the page and remove the old one
 function loadPageCSS(page) {
     // Remove the previous CSS link if it exists

@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js" integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
     <title>Zadanie 3</title>
 </head>
 <body>
-    <div class="main">
+    <div class="main" id="math">
+        <h2>Math Page</h2>
         <p>Tomek przejechał na rowerze 32 km szosą i 20 km polną drogą w czasie 2 godzin i 40 minut. Średnia prędkość jazdy po szosie była o 20 km/h większa od średniej prędkości jazdy po polnej drodze. Oblicz średnią prędkość na szosie i średnią prędkość na polnej drodze.
         </p>
-        <img src="./obraz.jpeg" alt="Obraz pomocniczy">
+        <img src="/pages/zadanie_3/obraz.jpeg" alt="Obraz pomocniczy">
         <p>Oznaczmy: </p>
         <p> \( x - \) średnia prędkość Tomka na polnej drodze (w \( \frac{km}{h} \)), <br>
             \( x + 20 - \) średnia prędkość Tomka na szosie (w \( \frac{km}{h} \))<br></p>
@@ -31,7 +28,15 @@
 
         <p><b>Odp. </b> Średnia prędkość Tomka na polnej drodze wynosi \( 12 \frac{km}{h} \), a na szosie \( 32 \frac{km}{h} \).</p>
 
-        
+        <script>
+            // Wait for the content to be loaded and then render the math
+            document.addEventListener("DOMContentLoaded", function() {
+                var mathElement = document.querySelectorAll('#content p');
+                if (mathElement) {
+                    katex.render(mathElement.innerHTML, mathElement);
+                }
+            });
+        </script>
 
     </div>
 </body>
