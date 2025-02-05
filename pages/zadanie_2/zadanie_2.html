@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Zadanie 2</title>
+</head>
+<body>
+    <div class="main">
+        <h3>Zadanie 2</h3>
+        <p>Dwaj rowerzyści wyjechali równocześnie na trasę o długości 36 km. Średnia prędkość pierwszego rowerzysty była o 
+        6 km/h większa niż średnia prędkość drugiego, więc pokonał on trasę w czasie o godzinę krótszym niż drugi. 
+        Oblicz średnie prędkości obu rowerzystów.</p>
+
+        <p>Oznaczmy: 
+        <br>
+        <span class="math">V_1</span> - Średnia prędkość pierwszego rowerzysty <br>
+        <span class="math">V_2</span> - Średnia prędkość drugiego rowerzysty <br>
+        <span class="math">t_1</span> - Czas jazdy pierwszego rowerzysty <br>
+        <span class="math">t_2</span> - Czas jazdy drugiego rowerzysty <br>
+        </p>
+        <p>Z polecenia wiemy, że:</p>
+        <pre class="math">t_1 = t_2 - 1</pre>
+        <pre class="math">V_1 = V_2 + 6\frac{km}{h}</pre>
+        <pre class="math">S_1 = S_2 = 36</pre>
+        
+        <br>
+        <p>Podstawiając do wzoru <span class="math"> S = V \cdot t</span>, otrzymujemy równanie:</p>
+        <pre class="math">V_1 t_1 = (V_2 + 6)(t_2 - 1) = V_2 t_2 = 36</pre>
+        
+        <p>Przekształcamy równanie <span class="math"> V_2 t_2 = 36</span> i otrzymujemy:</p>
+        <pre class="math">t_2 = \frac{36}{V_2}</pre>
+        
+        <p>Podstawiamy do równania: <span class="math"> (V_2 + 6)(t_2 - 1) = 36</span></p>
+        <pre class="math">(V_2 + 6)(\frac{36}{V_2} - 1) = 36</pre>
+        <pre class="math">36 - V_2 + \frac{216}{V_2} - 6 - 36 = 0</pre>
+        <pre class="math">-V_2 + \frac{216}{V_2} - 6 = 0  / -(V_2)</pre>
+        <pre class="math">V_2^2 + 6V_2 - 216 = 0</pre>
+        
+        <p>Liczymy równanie kwadratowe:</p>
+        <pre class="math">\Delta = 6^2 - 4(1 \cdot -216) = 900</pre>
+        <pre class="math">\sqrt{\Delta} = 30</pre>
+        <pre class="math">x_1 = \frac{-6 + 30}{2} = 12</pre>
+        <pre class="math">x_2 = \frac{-6 - 30}{2} = -18</pre>
+        
+        <p>Więc  <span class="math"> V_2 = 12 \frac{km}{h}</span>, a <span class="math"> V_1 = V_2 + 6 = 18 \frac{km}{h}</span> </p>   
+
+        <b>Odpowiedź:</b>
+        <p>Średnia prędkość pierwszego rowerzysty wynosi 18  <span class="math"> \frac{km}{h}</span>, a drugiego 12 <span class="math"> \frac{km}{h}</span>.</p>
+    </div>
+
+    <script>
+        // Wait for the content to be loaded and then render the math
+        setTimeout(function() {
+            const mathElements = document.querySelectorAll(".math"); // Select all elements with class "math"
+            
+            if (mathElements.length === 0) {
+                console.error("No math elements found.");
+                return;
+            }
+    
+            mathElements.forEach(element => {
+                katex.render(element.innerHTML, element);
+            });
+        }, 1000);
+    </script>
+</body>
+</html>
