@@ -3,6 +3,6 @@ body {
     font-size: 30px;
 }
 
-.adnote {
+#content_zadanie .adnote {
     text-align: center;
 }
