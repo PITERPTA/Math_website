@@ -1,0 +1,12 @@
+body {
+    margin: 40px;
+    font-size: 30px;
+}
+
+.adnote {
+    text-align: center;
+}
+pre {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
