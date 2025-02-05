@@ -7,10 +7,13 @@
     text-align: center;
 }
 #content_zadanie .main { 
+    flex-direction: column;
+    word-wrap: break-word;
     display: flex;
     justify-content: center;
     align-items: center;
     height: auto;
+    width: 50vw;
 }
 #content_zadanie p {
     font-size: 20px;
@@ -18,4 +21,5 @@
 }
 #math {
     color: black;
+    display: inline-block;
 }
