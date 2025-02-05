@@ -5,4 +5,10 @@ body {
 
 #content_zadanie .adnote {
     text-align: center;
+    line-height: 70px;
+}
+
+#content_zadanie .math {
+    text-align: center;
+    line-height: 70px;
 }
