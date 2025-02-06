@@ -1,11 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
     background-color: #f4f4f9;
     color: #333;
 }
 
-h1 {
+#content_zadanie h1 {
     text-align: center;
     color: #0073e6;
 }
