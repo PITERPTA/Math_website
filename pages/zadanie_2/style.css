@@ -1,12 +1,17 @@
-body {
-    margin: 40px;
-    font-size: 30px;
+#content_zadanie {
+    width: 70vh;
+    align-self: center;
+}
+#content_zadanie body {
+    justify-content: center;
 }
 
-.adnote {
+#content_zadanie .main {
     text-align: center;
+    line-height: auto;
 }
-pre {
+
+#content_zadanie .math {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    line-height: auto;
 }

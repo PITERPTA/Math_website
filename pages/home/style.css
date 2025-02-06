@@ -1,5 +1,8 @@
+html {
+    background-color: #f4f4ff;
+}
 #content {
-    background-color: #f4f4f4;
+    background-color: #f4f4ff;
     height: 100%;
     width: 100%;
     margin: 0;

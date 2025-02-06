@@ -4,7 +4,13 @@
     box-sizing: border-box;
 }
 body {
-    background-color:#f4f4f4 ;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+html {
+    min-height: 100vh;
+    background-color: #f4f4ff;
 }
 .container {
     display: flex;

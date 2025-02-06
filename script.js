@@ -35,7 +35,7 @@ function loadContent(page) {
         .then(response => response.ok ? response.text() : "<h1>404 - Page Not Found</h1>")
         .then(data => {
             contentDiv.innerHTML = data; // Insert the content into the page
-            updateUrlParam('zadanie', 'zadanie_3') // Update the URL
+            updateUrlParam('zadanie=',page) // Update the URL
             executeScripts();            
             // Load the corresponding CSS for this page
             loadPageCSS(page);
@@ -72,6 +72,7 @@ function loadPageCSS(page) {
 // Load the correct page on refresh
 window.onload = () => {
     const urlParams = new URLSearchParams(window.location.search);
-    loadPage(urlParams.get("page") || "home"); // Default to home if no page is specified
+    loadPage(urlParams.get("page") || "home")
+    // Default to home if no page is specified
 };
 

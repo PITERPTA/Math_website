@@ -1,3 +1,6 @@
+#content body {
+    background-color: #f4f4ff;
+}
 #content {
     background-color: #f4f4ff;
     height: 100%;
@@ -15,7 +18,7 @@
 #content .top_box {
     display: flex;
     background-color: lightblue;
-    width: 50vh;
+    width: 75vh;
     justify-content: center;
     height: auto;
     margin: 20px;
