@@ -64,14 +64,17 @@ v = 60 km/h
     <script>
         // Wait for the content to be loaded and then render the math
         setTimeout(function() {
-            mathElement = document.getElementById("math")
-            if (mathElement) {
-                // Render LaTeX math with KaTeX
-                katex.render(mathElement.innerHTML, mathElement);
-            } else {
-                console.error("Math element not found.");
+            const mathElements = document.querySelectorAll(".math"); // Select all elements with class "math"
+
+            if (mathElements.length === 0) {
+                console.error("No math elements found.");
+                return;
             }
-        }, 5000)
+
+            mathElements.forEach(element => {
+                katex.render(element.innerHTML, element);
+            });
+        }, 1000);
     </script>
 
     <div class="footer">
