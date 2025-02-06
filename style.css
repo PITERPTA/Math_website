@@ -3,32 +3,57 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body {
+    background-color:#f4f4f4 ;
+}
 .container {
     display: flex;
-    height: 100vh;
     background-color: #f4f4f4;
 }
 
 .sidebar {
+    position: fixed;
     width: 200px;
     background-color: lightblue;
-    color: white;
+    color: black;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     border-radius: 0px 30px 0px 0px;
+    height: 100vh;
+    overflow-y: auto; /* Allows scrolling if content overflows */
 }
+
 .sidebar a {
     color: black;
     text-decoration: none;
     padding: 10px;
-    display: block;
-    
-    }
+}
+
 .content {
-    flex-grow: 1; 
+    flex-grow: 1;
     padding: 20px;
+    margin-left: 220px; /* Adjusted to prevent overlap with sidebar */
     background-color: #f4f4f4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+        padding: 5px;
+        border-radius: 0px 20px 0px 0px;
+        height: 100vh;
+    }
+
+    .sidebar a {
+        font-size: 12px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .content {
+        margin-left: 70px; /* Adjusted to fit sidebar size */
+    }
 }

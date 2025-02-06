@@ -1,14 +1,17 @@
-body {
-    margin: 40px;
-    font-size: 30px;
+#content_zadanie {
+    width: 70vh;
+    align-self: center;
+}
+#content_zadanie body {
+    justify-content: center;
 }
 
 #content_zadanie .adnote {
     text-align: center;
-    line-height: 70px;
+    line-height: auto;
 }
 
 #content_zadanie .math {
     text-align: center;
-    line-height: 70px;
+    line-height: auto;
 }

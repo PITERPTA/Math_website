@@ -15,15 +15,34 @@
 #content .top_box {
     display: flex;
     background-color: lightblue;
-    width: 50svw;
+    width: 50vh;
     justify-content: center;
-    height: 100px;
+    height: auto;
     margin: 20px;
     padding: 20px;
     border-radius: 30px 30px 10px 10px;
     flex-direction: column;
     align-items: center;
+    align-self: center;
 }
 #content_zadanie {
     background-color: #f4f4ff;
+}
+@media (max-width: 768px) {
+    #content {
+        margin: 100px;
+        align-items: center;
+    }
+    #content .top_box {
+    display: flex;
+    background-color: lightblue;
+    justify-content: center;
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 30px 30px 10px 10px;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    }
 }
